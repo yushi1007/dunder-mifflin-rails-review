@@ -1,0 +1,8 @@
+<h1><%= @employee.full_name%></h1>
+<p>Alias: <%= @employee.alias %> </p>
+<p>Title: <%= @employee.title %> </p>
+<p>Office: <%= @employee.office %> </p>
+<img src = <%= @employee.img_url %> width="300" height="300" >
+
+<%= button_to "Edit the employee", edit_employee_path(@employee), :method => :get %>
+<%= button_to "Go back", employees_path(), :method => :get %>

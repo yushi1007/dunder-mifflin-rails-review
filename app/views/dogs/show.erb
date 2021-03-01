@@ -1,0 +1,11 @@
+<h1><%= @dog.name%></h1>
+<p>breed: <%= @dog.breed %> </p>
+<p>age: <%= @dog.age %> </p>
+
+
+<h2>list of Dunder Mifflin Employees they are connected to:</h2>
+    <% @dog.employees.each do |employee| %>
+<li><%= link_to employee.full_name, employee %></li>
+
+<% end %>
+<%= button_to "Go back", dogs_path(), :method => :get %>
